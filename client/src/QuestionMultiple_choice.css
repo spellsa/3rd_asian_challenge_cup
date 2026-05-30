@@ -1,0 +1,55 @@
+.ResetMultipleChoice{
+    background-color: #fff;
+    border: none;
+}
+
+.MultipleChoice{
+    background-color: white;
+    margin-right: 1em;
+    height: 40%;
+    margin-bottom: 5%;
+    box-shadow:inset -1px -1px 0 rgba(0, 0, 0, .3);
+    padding: 2em;
+    padding-top: 0em;
+    padding-bottom: 3em;
+}
+
+.notSelectedButton{
+    background-color: aliceblue;
+    border: solid 1px #b1b1b1;
+    width: auto;
+    height: 3em;
+    border-radius: 5px;
+    margin-right: 4em;
+    margin-left: 1.5em;
+    font-size: 1em;
+    margin-top: 2em;
+    font-family: "Kosugi-Maru";
+    justify-content: center;
+    font-size: large;
+    padding: 1em 2em;
+}
+
+.notSelectedButton:hover{
+    border: solid 3px #656565;
+}
+
+.selectedButton{
+    border: solid 3px #0091ff;
+    width: auto;
+    height: 3em;
+    border-radius: 5px;
+    background-color: #84b9ff;
+    margin-right: 4em;
+    font-size: 1em;
+    margin-top: 2em;
+    margin-left: 1.5em;
+    font-family: "Kosugi-Maru";
+    justify-content: center;
+    font-size: large;
+    padding: 1em 2em;
+}
+.formExplain{
+    margin: 0;
+    color: #656565;
+}

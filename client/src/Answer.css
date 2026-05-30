@@ -1,0 +1,293 @@
+@font-face {
+    font-family: "Kosugi-Maru";
+    src: url(../public/Kosugi_Maru/KosugiMaru-Regular.ttf);
+}
+
+.answer {
+    font-family: "Kosugi-Maru";
+    padding: 20px;
+    background-color: #f0f2f5;
+    min-height: 100vh;
+}
+
+.answerTitle {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.gradingMessage {
+    text-align: center;
+    color: #007bff;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.questionDescription {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.answerResult {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.answerResult h3 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.answerNumber {
+    font-size: 1.5em;
+    color: #555;
+    margin-right: 15px;
+}
+
+.correction {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.correct {
+    color: #28a745;
+}
+
+.wrong {
+    color: #dc3545;
+}
+
+/* Common styles for question types */
+.trueFalseAnswer,
+.fillInTheBlankAnswer,
+.singleChoiceAnswer,
+.multipleChoiceAnswer,
+.freeTextAnswer,
+.elseAnswer {
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.trueFalseStatement,
+.fillInTheBlankStatement,
+.singleChoiceStatement,
+.multipleChoiceStatement,
+.freeTextStatement,
+.elseStatement {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.userAnswerTrueFalse,
+.modelAnswerTrueFalse,
+.userAnswerSingleChoice,
+.modelAnswerSingleChoice,
+.userAnswerMultipleChoice,
+.modelAnswerMultipleChoice,
+.userAnswerFreeText,
+.modelAnswerFreeText,
+.userAnswerElse,
+.modelAnswerElse {
+    font-size: 1em;
+    color: #555;
+    margin-top: 8px;
+}
+
+/* Fill in the blank specific styles */
+/* Styles from QuestionFill_in_the_blank.css */
+.FillInTheBlankInput { /* This class is for the input field in the question component, but keeping it for reference */
+    font-family: "Kosugi-Maru";
+    background-color: #fff;
+    border:solid 1px #333;
+    font-size: 24px;
+    border-radius: 5px;
+    padding: 0.3em;
+}
+.FillInTheBlankInput:focus{ /* This class is for the input field in the question component, but keeping it for reference */
+    border: solid 3px #0091ff;
+}
+
+.fillInTheBlankStatement input.FillInTheBlankResponse {
+    border: 1px solid #ccc;
+    padding: 5px 8px;
+    border-radius: 3px;
+    margin: 0 5px;
+    background-color: #e9ecef;
+    color: #495057;
+    cursor: default;
+    font-family: "Kosugi-Maru"; /* Added based on FillInTheBlankInput */
+    font-size: 1em; /* Adjusted from 24px for better fit in explanation */
+}
+
+/* Single and Multiple Choice specific styles */
+.checkBoxSingleChoice,
+.checkBoxMultipleChoice {
+    margin-right: 15px;
+    display: inline-block;
+}
+
+.checkBoxSingleChoice input[type="button"],
+.checkBoxMultipleChoice input[type="button"] {
+    padding: 8px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    color: #495057;
+    cursor: default;
+    font-family: "Kosugi-Maru";
+    font-size: 0.9em;
+}
+
+.answerSingleChoice,
+.answerMultipleChoice {
+    background-color: #007bff !important;
+    color: white !important;
+    border-color: #007bff !important;
+}
+
+.notAnswerSingleCohice,
+.notAnswerMultipleCohice {
+    opacity: 0.7;
+}
+
+.aiExplanation {
+    font-size: 0.95em;
+    color: #6c757d;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed #e0e0e0;
+}
+
+.explanation {
+    font-size: 1em;
+    color: #666;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.backPage {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.backTop,
+.backQuestion {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: "Kosugi-Maru";
+    transition: background-color 0.3s ease;
+}
+
+.backTop {
+    background-color: #6c757d;
+    color: white;
+}
+
+.backTop:hover {
+    background-color: #5a6268;
+}
+
+.backQuestion {
+    background-color: #007bff;
+    color: white;
+}
+
+.backQuestion:hover {
+    background-color: #0056b3;
+}
+
+.notFoundAPI {
+    text-align: center;
+    padding: 50px;
+    background-color: #fff;
+    margin: 50px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+.notFoundError {
+    color: #dc3545;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.notFoundExplanation {
+    color: #6c757d;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.answerResult h3{
+    display: block;
+}
+.modelAnswerFillInTheBlank span{
+ padding-right: 2em;
+}
+
+.followUpButton{
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: "Kosugi-Maru";
+    transition: background-color 0.3s ease;
+    background-color: #007bff;
+    color: white;
+}
+.followUpButton:hover{
+    background-color: #0056b3;
+}
+
+.followUpNavigateButton{
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: "Kosugi-Maru";
+    transition: background-color 0.3s ease;
+    background-color: #00c164;
+    color: white;
+}
+.followUpNavigateButton:hover{
+    background-color: #007a3f;
+}
+
+.followUpMaking .message_1{
+  margin-top: 5%;
+  padding-left: 42%;
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 2em;
+  font-family: "Kosugi-Maru";
+}
+
+.followUpMaking .message_2{
+  margin-top: 1%;
+  padding-left: 42.5%;
+  display: inline-block;
+  white-space: nowrap;
+  font-family: "Kosugi-Maru";
+}
+

@@ -1,0 +1,96 @@
+.hiddenProfileInput{
+    display: none;
+}
+
+.profileIcon{
+    position: absolute;
+    width: 7em;
+    height: 7em;
+    border-radius: 3.5em;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+.FaPenIcon{
+    opacity: 0;
+    background-color: none;
+    position: absolute;
+    top: 0.6em;
+    padding-left: 0.2em;
+    padding: 2.5em 2em 2.5em 2em;
+}
+
+.FaPenIcon:hover{
+    opacity: 0.5;
+    background-color: none;
+    position: absolute;
+    left: 1.25em;
+    top: 1em;
+}
+
+.userName{
+    white-space: nowrap;
+    padding: 0;
+    font-size: 3em;
+    font-weight: bold;
+    width: auto;
+    float: right;
+    padding-top: 1em;
+    padding-right: 60%;
+}
+
+.nameEditMode {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 1em;
+}
+
+.nameEditInput {
+  border: 1px solid #ccc;
+  border-radius: 5px; 
+  padding: 8px;
+  font-size: 1em;
+  margin-left: 10em;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.submitNameButton,
+.cancelNameButton {
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  color: white;
+  cursor: pointer; 
+}
+.submitNameButton {
+  background-color: #007bff;
+}
+
+.cancelNameButton {
+  background-color: #6c757d;
+}
+
+.notEditedChange,.editedChange{
+  margin-top: 12em;
+  margin-bottom: 5em;
+}
+
+.editedChange{
+  background-color: #007bff;
+}
+
+
+.userLevel{
+  
+}
+
+.userLevel span{
+    font-size: 48px;
+    border-bottom: solid #aaa 2px;
+    padding-right: 80%;
+    margin-top: 3em;
+    padding-bottom: 2em;
+    text-align:center;
+}

@@ -1,0 +1,166 @@
+@font-face {
+    font-family: "Kosugi-Maru";
+    src: url(../public/Kosugi_Maru/KosugiMaru-Regular.ttf);
+}
+/* input[type="file"] を非表示にする */
+.hiddenInput {
+  display: none;
+}
+
+.uploadButton,.generateButton,.notUploadButton{
+  background-color: white;
+  color: black;
+  border-radius: 18px;
+  height: 20%;
+  padding: 1.5em;
+  margin: 1em;
+  width: 20%;
+  border-color: gray;
+  border-width: 1px;
+  font-family: "Kosugi-Maru";
+}
+
+.generateButton{
+  width: 15em;
+  height: 3em;
+  padding: 0.7em;
+  padding-left: 0.5em;
+  font-size: 1.5em;
+  display: block;
+  margin: 2em auto;
+}
+
+.generateButton span{
+color: black;
+padding: 1em;
+vertical-align: center;
+}
+
+.generateButton:hover{
+  background-color: #93dfab;
+  animation: fadeIn 0.5s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+  box-shadow:inset -3px -3px 0 rgba(0, 0, 0, .3);
+}
+.uploadButton span,.notUploadButton span{
+color: black;
+padding: 1em;
+vertical-align: center;
+font-size: 1.5em;
+}
+.uploadButton,.notUploadButton{
+  margin-top: 30%;
+  margin-left: 20%;
+  box-shadow:inset -2px -2px 0 rgba(0, 0, 0, .3);
+}
+.uploadButton:hover,.notUploadButton:hover{
+  background-color: #93dfab;
+  z-index: -1;
+  animation: fadeIn 0.5s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+  box-shadow:none;
+}
+
+.uploadButton{
+  margin-top: 0;
+}
+
+img{
+  position: absolute;
+  object-fit: fill;
+  height: 20em;
+  margin: 0;
+  margin-left: 25%;
+  margin-top: 5%;
+}
+
+.imagePreview{
+  position: relative;
+  object-fit: contain;
+  height: 15em;
+  width: auto;
+  max-width: 100%;
+  margin: 0.5em;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+iframe{
+  object-fit: contain;
+  height: 15em;
+  width: 20em;
+  margin: 0.5em;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.pdfPreview{
+  object-fit: fill;
+}
+
+.preview-grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  justify-content: center;
+  padding: 1em;
+  max-width: 90%;
+  margin: 0 auto 2em auto;
+  min-height: 20em;
+  align-items: flex-start;
+}
+
+.previewContainer{
+  position: relative;
+  margin-top: 2em;
+  text-align: center;
+}
+
+
+.loader{
+  border: 12px solid #fafafa;
+  border-radius: 50%;
+  border-top: 12px solid #34db8d;
+  width: 100px;
+  height: 100px;
+  animation: spin 1s linear infinite;
+  margin-left: 45%;
+  margin-top: 10%;
+}
+
+.questionMaking .message_1{
+  margin-top: 5%;
+  padding-left: 42%;
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 2em;
+  font-family: "Kosugi-Maru";
+}
+
+.questionMaking .message_2{
+  margin-top: 1%;
+  padding-left: 42.5%;
+  display: inline-block;
+  white-space: nowrap;
+  font-family: "Kosugi-Maru";
+}
+
+.fileUploader{
+margin: 0;
+}
+
+@keyframes spin{
+  0%{
+    transform: rotate(0deg);
+  }
+
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

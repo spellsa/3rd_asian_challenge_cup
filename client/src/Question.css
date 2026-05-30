@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "Kosugi-Maru";
+    src: url(../public/Kosugi_Maru/KosugiMaru-Regular.ttf);
+}
+
+.submitButton{
+    margin-top: 3%;
+    margin-left: 4%;
+    margin-bottom: 5%;
+    padding: 1em 2em;
+    border-radius: 10px;
+    background-color: #93dfab;
+    border: solid #8d8d8d;
+    box-shadow:inset -2px -2px 0 rgba(0, 0, 0, .3);
+}
+
+.submitButton:hover{
+    box-shadow: none;
+}
+
+.submitButton span{
+    font-family: "Kosugi-Maru";
+    padding-left: 1em;
+    font-size: 2em;
+}
+
+ul{
+    background-color: #f6f7fb;
+    padding-top: 5%;
+}
+
+.userLevel {
+  margin-top: 2em; 
+  text-align: left; 
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+}
+

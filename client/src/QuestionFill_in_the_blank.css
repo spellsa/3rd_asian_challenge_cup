@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "Kosugi-Maru";
+    src: url(../public/Kosugi_Maru/KosugiMaru-Regular.ttf);
+}
+
+.ResetFillInTheBlank{
+    background-color: #fff;
+    border: none;
+}
+
+.FillInTheBlankInput{
+    font-family: "Kosugi-Maru";
+    background-color: #fff;
+    border:solid 1px #333;
+    font-size: 24px;
+    border-radius: 5px;
+    padding: 0.3em;
+}
+.FillInTheBlankInput:focus{
+    border: solid 3px #0091ff;
+}
+
+.FillInTheBlank{
+    background-color: white;
+    margin-right: 1em;
+    height: 40%;
+    margin-bottom: 5%;
+    box-shadow:inset -1px -1px 0 rgba(0, 0, 0, .3);
+    padding: 2em;
+}

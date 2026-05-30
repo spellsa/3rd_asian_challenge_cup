@@ -1,0 +1,175 @@
+@font-face {
+    font-family: "smart-font";
+    src: url(../public/SmartFontUI/横書き専用プロポーショナルフォント\(サポート外\)/03SmartFont-P.ttf);
+}
+
+@font-face {
+    font-family: "Kosugi-Maru";
+    src: url(../public/Kosugi_Maru/KosugiMaru-Regular.ttf);
+}
+
+.App {
+    background-color: #8ac4ff;
+    height: 5em;
+    padding-top: 1em;
+}
+
+.titleLink,
+.createLink,
+.dashboardLink {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.titleLink {
+    font-size: 48px;
+    font-family: "Kosugi-Maru";
+    margin-left: 0.5em;
+    margin-right: 60%;
+}
+
+.createLink {
+    font-family: "smart-font";
+    padding: auto;
+    margin-left: 0em;
+    font-size: 36px;
+    position: absolute;
+    margin-top: 0.5em;
+}
+
+.icon {
+    height: 3em;
+    width: 3em;
+    border-radius: 1.5em;
+    white-space: nowrap;
+    margin-left: 15em;
+    margin-top: 1em;
+}
+
+.friendButton,
+.recentButton,
+.myButton {
+    color: #333;
+    font-family: "Kosugi-Maru";
+    background-color: #fff;
+    padding: 1.5em 1.5em;
+    border: 5px;
+    position: relative;
+    padding-right: 5em;
+    margin: 0.5em 1em;
+    font-size: large;
+}
+
+.friendButton:hover::after,
+.recentButton:hover::after,
+.myButton:hover::after {
+    content: "▶";
+    margin-left: 0.8em;
+    top: 1.25em;
+    animation: fadeIn 0.7s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+    position: absolute;
+}
+
+.afterClick {
+    color: #333;
+    font-family: "Kosugi-Maru";
+    font-size: auto;
+    background-color: #fff;
+    padding: 1.5em 1.5em;
+    border: 5px;
+    position: relative;
+    padding-right: 5em;
+    margin: 1em 1em;
+}
+
+.afterClick:hover::after {
+    content: "▼";
+    margin-left: 0.8em;
+    position: absolute;
+}
+
+.menuImage {
+    margin: 0;
+    height: 40%;
+    width: 26%;
+    object-fit: fill;
+}
+
+.quizLink:hover {
+    transform: translateY(-3px);
+}
+
+/* .quizLinkの幅を一定にし、一行に3問入るように調整 */
+.quizLink{
+    display: inline-flex; /* インラインブロックとして配置し、内部はflexで中央揃え */
+    vertical-align: top; /* 上端を揃える */
+    width: 20em; /* 各クイズリンクの固定幅 */
+    height: 8em; /* 各クイズリンクの固定高さ */
+    box-sizing: border-box; /* paddingとborderを幅と高さに含める */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    margin: 0.75em; /* 各アイテム間のマージン（左右上下に均等に適用） */
+    flex-direction: column; /* 内容を縦方向に配置 */
+    justify-content: center; /* 内容を垂直方向に中央揃え */
+    align-items: center; /* 内容を水平方向に中央揃え */
+}
+
+/* .quizLink a の内部レイアウト調整 */
+.quizLink a {
+    text-decoration: none;
+    color: #333;
+    flex-grow: 1;
+    display: flex;
+    white-space: normal; /* テキストの折り返しを許可 */
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* .quizLink内のh3とspanのテキスト整列と折り返しを調整 */
+.quizLink h3,
+.quizLink span {
+    font-family: "Kosugi-Maru";
+    font-size: x-large;
+    margin: 0;
+    padding: 0.5em 1em;
+    text-align: center;
+    word-break: break-word; /* 長い単語の途中で改行を許可 */
+    white-space: normal; /* テキストの自然な折り返しを許可 */
+    overflow-wrap: break-word;
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center; /* テキストを垂直方向に中央揃え */
+}
+
+/* .robbyButtons内の要素を中央揃えにし、全体の幅を制御 */
+.robbyButtons {
+    text-align: center; /* インラインブロック要素（.quizLink）を中央揃えにする */
+    max-width: 65em; /* 1行に3つのクイズ（20em*3=60em + マージン）が収まるように幅を制限 */
+    margin: 0 auto; /* robbyButtons自体を中央に配置 */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.DashboardLogo {
+    height: 1.8em;
+    width: 3em;
+    position: relative;
+    margin: 0;
+}

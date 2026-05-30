@@ -1,0 +1,136 @@
+.sideBar{
+    float: right;
+    list-style: none;
+    padding-top: 2em;
+}
+.menuButton{
+    right: 1.5em;
+    height: 3em;
+    width: 3em;
+    margin-top: 3em;
+    margin-right: 1.25em;
+    position: absolute;
+    z-index: 10; /* 他の要素より前に出す */
+}
+.hideMenu{
+    background-color: rgba(25,42,91, 0.8);
+    top: 0;
+    right: 0;
+    position: fixed;
+    width: 20vw;
+    height: 100vh;
+    z-index: -1; /* 他の要素より前に出す */
+    padding-top: 5em;
+    animation: fadeOut 0.7s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+.sideMenu{
+    background-color: rgba(25,42,91, 0.8);
+    top: 0;
+    right: 0;
+    position: fixed;
+    width: 20vw;
+    height: 100vh;
+    padding-top: 5em;
+    animation: fadeIn 0.7s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+      z-index: 10;
+}
+.sideMenu a{
+    color: aliceblue;
+    text-decoration: none;
+    padding-left: 2em;
+}
+.sideMenu li{
+  padding-top: 2em;
+  font-size: 1.25em;
+  position: relative; /* 擬似要素の基準に */
+  overflow: hidden;
+}
+
+.sideMenu li::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.4s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.sideMenu li:hover::after {
+  width: 70%;
+}
+
+.notActive, .menuActive{
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+  right: 1.5em;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.itemCross {
+  position: relative;
+  width: 32px;
+  height: 24px;
+  display: block;
+}
+
+.itemCross::before,
+.itemCross::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 32px;
+  height: 4px;
+  background: #333;
+  border-radius: 2px;
+  transition: transform 0.4s, top 0.4s;
+}
+
+.itemCross::before {
+  top: 0;
+}
+
+.itemCross::after {
+  top: 16px;
+}
+
+/* メニュー展開時のクロス */
+.menuActive .itemCross::before {
+  top: 8px;
+  transform: rotate(45deg);
+}
+
+.menuActive .itemCross::after {
+  top: 8px;
+  transform: rotate(-45deg);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
